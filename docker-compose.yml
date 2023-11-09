@@ -1,0 +1,27 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api-produtos-container
+    ports:
+      - "8080:80"
+    volumes:
+      - ./api-produtos:/var/www/html
+    networks:
+      - api-produtos-network
+    depends_on:
+      - mysqldb 
+  mysqldb:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: bancolocal
+      MYSQL_DATABASE: teste
+    ports:
+        - 3306:3306
+   networks:
+      - api-produtos-network
+networks:
+  api-produtos-network:
+    driver: bridge
