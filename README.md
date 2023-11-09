@@ -20,3 +20,6 @@
 - Deletar Produto
 
 ![delete_product](https://github.com/matheusmarquesx/api-produtos/assets/137103666/5d45c9f1-4729-4590-8930-d6d737187d56)
+
+- Teste PHPUNIT
+- ![image](https://github.com/matheusmarquesx/api-produtos/assets/137103666/d241b2d1-168b-492d-8d89-a26928b4aedf)
